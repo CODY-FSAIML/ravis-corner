@@ -1,14 +1,14 @@
 'use client'
 
-import { ArrowUpRight, Coffee, Code2, Mail, MapPin, Menu, Sparkles } from 'lucide-react'
+import { ArrowUpRight, Coffee, Github, Linkedin, Mail, MapPin, Menu, Sparkles } from 'lucide-react'
 
-const heroImage = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neon%20Cyberpunk%20Arrival_%20Ravi%20Sankar-L7JFTletQN7oK23A7JjKEZ2FaxcOy9.png'
+const heroImage = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Cozy%20Caf%C3%A9%20Contemplation-jRtsHGyOuiy5PMYh3ETr1nc5g2zMFP.png'
 
 const projects = [
-  { name: 'Gigflow Smart Leads', type: 'MERN CRM', text: 'A production-minded sales workspace with JWT auth, role-based access, filtering, pagination, and Dockerized services.', stack: 'React · Node · MongoDB · Docker' },
-  { name: 'Ravis AI.control', type: 'Decision intelligence', text: 'A CatBoost-powered command center that analyzes Bengaluru incidents and predicts road-closure risk.', stack: 'Python · CatBoost · Pandas · Streamlit' },
-  { name: 'Rebelions Resolve', type: 'Local Code AI', text: 'An offline-first coding agent with repository retrieval, symbol extraction, code verification, and controlled tools.', stack: 'Python · Qwen · llama.cpp · Vulkan' },
-  { name: 'E-commerce BDD', type: 'Test automation', text: 'A maintainable SauceDemo automation framework covering login, cart, product validation, screenshots, and JUnit reports.', stack: 'Behave · Gherkin · Selenium · POM' },
+  { name: 'Gigflow Smart Leads', type: 'MERN CRM', text: 'A production-minded sales workspace with JWT auth, role-based access, filtering, pagination, and Dockerized services.', stack: 'React · Node · MongoDB · Docker', href: 'https://github.com/CODY-FSAIML/gigflow-smart-leads-dashboard' },
+  { name: 'Ravis AI.control', type: 'Decision intelligence', text: 'A CatBoost-powered command center that analyzes Bengaluru incidents and predicts road-closure risk.', stack: 'Python · CatBoost · Pandas · Streamlit', href: 'https://github.com/CODY-FSAIML/Gridlock_prototype' },
+  { name: 'Rebelions Resolve', type: 'Local Code AI', text: 'An offline-first coding agent with repository retrieval, symbol extraction, code verification, and controlled tools.', stack: 'Python · Qwen · llama.cpp · Vulkan', href: 'https://github.com/The-Rebelions/Rebelions_resolve' },
+  { name: 'E-commerce BDD', type: 'Test automation', text: 'A maintainable SauceDemo automation framework covering login, cart, product validation, screenshots, and JUnit reports.', stack: 'Behave · Gherkin · Selenium · POM', href: 'https://github.com/CODY-FSAIML/E-commerce-BBD-automation' },
 ]
 
 const skills = ['Python', 'SQL / MySQL', 'Django / FastAPI', 'React / TypeScript', 'AI / ML / RAG', 'Selenium / BDD', 'PostgreSQL / MongoDB', 'Docker / AWS']
@@ -25,13 +25,13 @@ function App() {
 
     <section id="about" className="section about"><div><SectionTitle eyebrow="01 / the person behind the code" title="A little less noise. A lot more intent." /><p className="large-copy">I&apos;m a 2027 B.Tech Computer Science student at Raghu Engineering College, Visakhapatnam. My sweet spot is the space between a thoughtful product, reliable systems, and the small details that make software feel human.</p></div><div className="about-card"><MapPin size={18} /><p>Visakhapatnam,<br /><strong>Andhra Pradesh, India</strong></p><span>Available for internships & entry-level roles</span></div></section>
 
-    <section id="work" className="section work"><SectionTitle eyebrow="02 / things I&apos;ve made" title="Projects worth a second cup." /><div className="project-grid">{projects.map((project, index) => <article className="project" key={project.name}><div className="project-top"><span>0{index + 1}</span><ArrowUpRight size={18} /></div><p className="project-type">{project.type}</p><h3>{project.name}</h3><p>{project.text}</p><small>{project.stack}</small></article>)}</div></section>
+    <section id="work" className="section work"><SectionTitle eyebrow="02 / things I&apos;ve made" title="Projects worth a second cup." /><div className="project-grid">{projects.map((project, index) => <a className="project" key={project.name} href={project.href} target="_blank" rel="noreferrer"><div className="project-top"><span>0{index + 1}</span><ArrowUpRight size={18} /></div><p className="project-type">{project.type}</p><h3>{project.name}</h3><p>{project.text}</p><small>{project.stack}</small></article>)}</div></section>
 
     <section id="skills" className="section skills"><div><SectionTitle eyebrow="03 / my toolkit" title="Practical, polyglot, always learning." /><p className="large-copy">From backend APIs to browser automation and local AI, I enjoy learning the layer that makes the whole system work better.</p></div><div className="skill-list">{skills.map((skill, index) => <div key={skill}><span>0{index + 1}</span><strong>{skill}</strong></div>)}</div></section>
 
     <section className="section experience"><SectionTitle eyebrow="04 / experience" title="Learning in the real world." /><div className="experience-row"><div><p className="project-type">Jun 2026 — Aug 2026</p><h3>Software Developer Intern</h3><p className="large-copy">Heal Bharat Services LLP</p></div><p>Contributed to Quick-Check-Desk, an enterprise Hospital OPD Management System across web, desktop, and mobile. Worked with React Native, Expo, TypeScript, Firebase, GitHub, and feature validation across patient registration, check-ins, queue management, and notifications.</p></div></section>
 
-    <section id="contact" className="contact"><p className="eyebrow">05 / pull up a chair</p><h2 className="display">Let&apos;s make<br /><em>something useful.</em></h2><p>Have a project, opportunity, or good question? My inbox is open.</p><a className="button light" href="mailto:vvsravis@gmail.com">vvsravis@gmail.com <ArrowUpRight size={16} /></a><div className="socials"><a href="#" aria-label="GitHub"><Code2 /></a><a href="#" aria-label="LinkedIn"><Code2 /></a><a href="mailto:vvsravis@gmail.com" aria-label="Email"><Mail /></a></div></section>
+    <section id="contact" className="contact"><p className="eyebrow">05 / pull up a chair</p><h2 className="display">Let&apos;s make<br /><em>something useful.</em></h2><p>Have a project, opportunity, or good question? My inbox is open.</p><a className="button light" href="mailto:vvsravis@gmail.com">vvsravis@gmail.com <ArrowUpRight size={16} /></a><div className="socials"><a href="https://github.com/CODY-FSAIML" target="_blank" rel="noreferrer" aria-label="GitHub"><Github /></a><a href="LINKEDIN_URL_FROM_RESUME" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin /></a><a href="mailto:vvsravis@gmail.com" aria-label="Email"><Mail /></a></div></section>
     <footer><span>© 2027 V.V.S. Ravi Sankar</span><span>Made with coffee & curiosity</span></footer>
   </main>
 }
